@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 import app from './app'
 import config from './config/index'
 import corse from 'cors'
-import express, { Request } from 'express'
+import express from 'express'
 //mideleware setup
 
 app.use(corse())
@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 
 async function startServer() {
   try {
-    await mongoose.connect(config.dataBaseUrl as any)
+    await mongoose.connect(config.dataBaseUrl as string)
     console.log('Connected to database')
     app.listen(config.port, () => {
       console.log(`University of coder is running port ${config.port}`)

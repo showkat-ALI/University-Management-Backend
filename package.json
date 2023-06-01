@@ -13,6 +13,9 @@
     "lint:format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "eslintPrettierCheck": "yarn lint:eslintCheck && yarn prettier:check"
   },
+  "lint-staged": {
+    "src/**/*.ts": "yarn eslintPrettierCheck"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -21,6 +24,7 @@
     "@types/node": "^20.2.5",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   },
