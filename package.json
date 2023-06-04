@@ -6,11 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev --respawn --transpile-only src/server.ts    ",
-    "lint:eslintCheck": "eslint --ext .js,.ts .",
-    "lint:eslintIgnore": "eslint --ignore-path .eslintignore --ext .js,.ts .",
-    "lint:fix": "lint --fix",
-    "prettier:check": "yarn prettier --write .",
-    "lint:format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "lint:eslintCheck": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint:lintFix": "eslint . --fix",
+    "prettier:fix": "prettier --write .",
+    "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "eslintPrettierCheck": "yarn lint:eslintCheck && yarn prettier:check"
   },
   "lint-staged": {
